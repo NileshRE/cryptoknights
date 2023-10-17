@@ -1,17 +1,19 @@
 import { useEffect } from "react";
 import { addCoins } from "../Utils/CoinSlice";
 import { useDispatch } from "react-redux";
+import { Rapid_key } from "../Utils/constants";
 
 
 const useCryptoAPI =() =>{
 	const dispatch = useDispatch();
+	const key = Rapid_key
 
 	const getCoins =async()=>{
 	const url = 'https://coinranking1.p.rapidapi.com/stats?referenceCurrencyUuid=yhjMzLPhuIDl';
 	const options = {
 		method: 'GET',
 		headers: {
-			'X-RapidAPI-Key': 'd174c0a8d3msh5505beb042653d1p13cf55jsn061b99d4f7e6',
+			'X-RapidAPI-Key': key,
 			'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
 		}
 	};
