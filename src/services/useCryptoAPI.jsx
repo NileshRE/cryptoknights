@@ -4,12 +4,12 @@ import { useDispatch } from "react-redux";
 import { Rapid_key } from "../Utils/constants";
 
 
-const useCryptoAPI =() =>{
+const useCryptoAPI =(count) =>{
 	const dispatch = useDispatch();
 	const key = Rapid_key
 
 	const getCoins =async()=>{
-	const url = 'https://coinranking1.p.rapidapi.com/stats?referenceCurrencyUuid=yhjMzLPhuIDl';
+	const url = `https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=${count}&offset=0`;
 	const options = {
 		method: 'GET',
 		headers: {
@@ -21,9 +21,8 @@ const useCryptoAPI =() =>{
 	try {
 		const response = await fetch(url, options);
 		const result = await response.json();
-		const stats = result?.data;
-		dispatch(addCoins({
-			total:stats.totalCoins, markets:stats.totalMarkets, exchanges:stats.totalExchanges, volume:stats.total24hVolume, cap:stats.totalMarketCap }))
+		const stat = result?.data;
+		dispatch(addCoins(stat))
 	} catch (error) {
 		console.error(error);
 	}
