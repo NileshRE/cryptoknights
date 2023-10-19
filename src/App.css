@@ -1,3 +1,8 @@
+.app-container{
+    background-color: black;
+    color:white;
+}
+
 /* Navbar CSS */
 
 li {
@@ -8,7 +13,7 @@ li {
 }
 
 .link{
-    color: white;
+    color: black;
 }
 
 li:hover{
@@ -16,14 +21,22 @@ li:hover{
 }
 
 .logo {
-    width: 144px;
+    width:360px;
+}
+
+.app-name{
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+    padding:36px 6px;
 }
 
 .nav-container{
     display: flex;
     justify-items: center;
     justify-content: space-between;
-    background-color: rgb(2, 2, 101);
+    background-color: wheat;
+    padding: 16px;
 }
 
 .nav-items{
@@ -32,6 +45,10 @@ li:hover{
 }
 
 /* Homepage CSS */
+
+.more{
+    color:white;
+}
 
 .stats-heading{
     color:gray;
@@ -47,11 +64,6 @@ h3{
     padding: 12px 32px;
     border: 1px solid wheat;
     border-radius: 8px;
-}
-
-.stats-item:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border:none;
 }
 
 .stats{
@@ -79,13 +91,14 @@ h3{
 .cryptos-list{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin:0px 48px;
+    padding:20px 0px;
 }
 
 .rank-name{
     display: flex;
 }
-
 
 .name{
     width: 96px;
@@ -108,17 +121,31 @@ h3{
 .crypto-card:hover{
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: purple;
-    border:1px solid white;
     color:wheat;
 }
 
 .card-link{
-    color:black;
+    color:white;
 }
 
 .card-link:hover{
     color:wheat;
 }
+
+.search-btn{
+    padding: 6px 16px;
+    margin:0px 4px;
+    background-color: wheat;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.search-box{
+    padding:6px 12px;
+    border-radius:6px;
+    margin:24px 4px 6px 40px;
+}
+
 
 /* News Page */
 
@@ -144,10 +171,6 @@ h3{
     padding:32px;
     margin:16px;
     border:1px solid wheat;
-}
-.news-card:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-    background-color: #ececec;
 }
 
 .news-container{

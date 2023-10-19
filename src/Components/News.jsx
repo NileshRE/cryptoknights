@@ -6,12 +6,13 @@ const News = ({simplified}) => {
   const count = simplified ? 6 : 50;
 
   useCryptoNewsAPI(count);
-  const Newslist = useSelector((store)=>store.coins.news)
+  const Newslist = useSelector((store)=>store?.coins?.news)
 
 
   return (
     <div className='news-container'>
-      {Newslist?.map((news)=>(
+      {Newslist && Newslist.length > 0 ? (
+      Newslist?.map((news)=>(
         <div className='news-card'>
         <div className='news-heading'>
           <p className='news-head'>{news.title}</p>
@@ -21,10 +22,12 @@ const News = ({simplified}) => {
             <p className='news-time'>{news.date}</p>
           </div>
           </div>
-      ))}
-      
+      ))
+      ) : (
+        <p>No news available</p>
+      )}
     </div>
-  )
+      )
 }
 
 export default News

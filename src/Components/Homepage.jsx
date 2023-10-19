@@ -9,7 +9,7 @@ import useCryptoNewsAPI from '../services/useCryptoNews';
 
 const Homepage = () => {
   useCryptoAPI(10);
-  useCryptoNewsAPI(10);
+  useCryptoNewsAPI(6);
   const details = useSelector((store)=>store?.coins.coins?.stats)
 
   return (
@@ -42,14 +42,14 @@ const Homepage = () => {
     <div className='stats-container'>
     <div className='headings'>
     <h3>Top 10 Cryptocurrencies in the World</h3>
-    <p><Link to='/cryptocurrency'>Show More</Link></p>
+    <p><Link className='more' to='/cryptocurrency'>Show More</Link></p>
     </div>
     <CryptoCurrency simplified />
   </div>
   <div className='stats-container'>
   <div className='headings'>
     <h3>Latest Crypto News</h3>
-    <p><Link to='/news'>Show More</Link></p>
+    <p><Link className='more' to='/news'>Show More</Link></p>
     </div>
     <News simplified />
   </div>
