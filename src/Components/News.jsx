@@ -24,7 +24,7 @@ const News = ({simplified}) => {
           </div>
       ))
       ) : (
-        <p>No news available</p>
+        <p>News Loading... Please refresh the Page...</p>
       )}
     </div>
       )

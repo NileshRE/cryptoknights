@@ -51,7 +51,8 @@ li:hover{
 }
 
 .stats-heading{
-    color:gray;
+    color:white;
+    font-weight:200;
 }
 
 h3{
