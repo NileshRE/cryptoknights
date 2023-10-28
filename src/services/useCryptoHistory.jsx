@@ -20,7 +20,6 @@ const useCryptoHistory =() =>{
 	try {
 		const response = await fetch(url, options);
 		const result = await response.json();
-		console.log(result)
 		setPriceHistory(result?.data?.history);
 	} catch (error) {
 		console.error(error);
