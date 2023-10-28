@@ -1,18 +1,20 @@
-import React, {useState} from 'react'
-import HTMLReactParser from 'html-react-parser'
-import { useParams } from 'react-router-dom'
-import millify from 'millify'
+import React from 'react'
+import useCryptoHistory from '../services/useCryptoHistory'
+import LineChart from './LineChart'
 
 
 const CryptoDetails = () => {
-  const {coinId} = useParams();
-  const[time, setTime] = useState();
-
+    const history = useCryptoHistory();
+   
+    const priceData = history.map((item)=>({
+        timestamp:item.timestamp,
+        price:item.price,
+    }));
+    
   return (
-    <div>
-        <p>{coinId}</p>
-        
-    </div>
+    <div className='chart-container'>
+        <LineChart data={priceData} />
+        </div>
   )
 }
 

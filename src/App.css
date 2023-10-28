@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 .app-container{
     background-color: black;
     color:white;
@@ -178,4 +182,32 @@ h3{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* Chart container  */
+
+.chart-container{
+    padding: 2%;
+}
+
+/* Exchanges page */
+
+.exchange-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+.exchange-card{
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+    border: 1px solid wheat;
+    color: white;
+    justify-content: space-around;
+    justify-self: left;
+    margin:16px;
+    border-radius: 6px;
+    font-weight: 200;
 }

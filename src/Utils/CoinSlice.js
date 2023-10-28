@@ -12,7 +12,7 @@ const CoinSlice = createSlice({
         },
         getNews:(state, action) =>{
             state.news=action.payload;
-        }
+        },
     }
 })
 

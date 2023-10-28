@@ -8,7 +8,6 @@ const News = ({simplified}) => {
   useCryptoNewsAPI(count);
   const Newslist = useSelector((store)=>store?.coins?.news)
 
-
   return (
     <div className='news-container'>
       {Newslist && Newslist.length > 0 ? (

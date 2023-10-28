@@ -27,7 +27,6 @@ const useCryptoAPI =(count) =>{
 		console.error(error);
 	}
 }
-
 		useEffect(()=>{
 			getCoins();
 		},[])
